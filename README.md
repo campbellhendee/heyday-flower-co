@@ -1,12 +1,12 @@
 # Heyday Flower Co — Next.js 14 (App Router)
 
-A refined, editorial, photo‑first site with luxury typography, glassy UI, restrained motion, and curated galleries.
+A refined, editorial, photo-first site with luxury typography, glassy UI, restrained motion, and curated galleries.
 
 ## Tech
 - Next.js 14 (App Router), TypeScript
 - next/font (Fraunces + Inter)
-- Next Image, masonry layout, rotating heroes (reduced‑motion aware)
-- SEO: Metadata, Open Graph, Twitter Card, robots, sitemap, LocalBusiness JSON‑LD
+- Next Image, masonry layout, rotating heroes (reduced-motion aware)
+- SEO: Metadata, Open Graph, Twitter Card, robots, sitemap, LocalBusiness JSON-LD
 
 ## Prerequisites
 - Node 18+ (recommended 20+)
@@ -40,7 +40,7 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 - `npm start` — run the built app
 
 ## Deploy
-- Push to GitHub, import into Vercel. Framework auto‑detects Next.js.
+- Push to GitHub, import into Vercel. Framework auto-detects Next.js.
 
 ## Troubleshooting
 - Port in use: Next will try 3000 → 3001 → 3002 automatically.
@@ -61,3 +61,4 @@ npm audit fix --force
 
 ---
 © Heyday Flower Co. All rights reserved.
+

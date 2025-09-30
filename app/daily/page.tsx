@@ -6,7 +6,7 @@ import { daily } from '@/lib/galleries/daily';
 export const metadata = {
   title: 'Daily Arrangements',
   description:
-    'Weekly, biweekly, or monthly—tailored to your environment.'
+    'Weekly, biweekly, or monthly — tailored to your environment.'
 };
 
 export default function Page() {
@@ -16,10 +16,10 @@ export default function Page() {
         images={dailyHero}
         eyebrow="Daily Arrangements"
         title="Fresh florals for homes, lobbies, and suites"
-        sub="Weekly, biweekly, or monthly—tailored to your environment."
+        sub="Weekly, biweekly, or monthly — tailored to your environment."
       />
       <section className="container" style={{ marginTop: '2rem' }}>
-        <p><strong>Overview:</strong> residences • lobbies • suites · weekly/biweekly/monthly</p>
+        <p><strong>Overview:</strong> residences • lobbies • suites — weekly/biweekly/monthly</p>
       </section>
       <GalleryGrid pics={daily} />
       <section className="container" style={{ margin: '2rem 0 3rem' }}>
@@ -30,3 +30,4 @@ export default function Page() {
     </>
   );
 }
+

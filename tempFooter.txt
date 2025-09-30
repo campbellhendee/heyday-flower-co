@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { BRAND } from '@/lib/constants';
 
 export default function Footer() {
@@ -25,9 +25,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <div>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</div>
+        <div>Â© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</div>
       </div>
     </footer>
   );
 }
-

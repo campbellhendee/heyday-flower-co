@@ -35,3 +35,4 @@ export const dailyHero: Pic[] = [
   { src: '/images/hero/daily/daily-hero-003.jpg', alt: 'Daily florals by Heyday Flower Co' },
   { src: '/images/hero/daily/daily-hero-004.jpg', alt: 'Daily florals by Heyday Flower Co' }
 ];
+
