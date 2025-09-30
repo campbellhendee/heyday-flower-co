@@ -6,7 +6,10 @@ import { weddings } from '@/lib/galleries/weddings';
 export const metadata = {
   title: 'Weddings',
   description:
-    'Romantic blooms, lush installations, and intentional details from welcome party to farewell brunch.'
+    'Romantic blooms, lush installations, and intentional details from welcome party to farewell brunch.',
+  openGraph: {
+    images: ['/images/hero/weddings/weddings-hero-001.jpg']
+  }
 };
 
 export default function Page() {
@@ -34,4 +37,3 @@ export default function Page() {
     </>
   );
 }
-

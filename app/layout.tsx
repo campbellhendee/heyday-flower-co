@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   },
   description:
     'Custom blooms crafted for weddings, events, and refined daily environments in Houston, Texas.',
+  manifest: '/manifest.webmanifest',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.svg'
+  },
   openGraph: {
     title: `${BRAND.name}`,
     description:
@@ -66,6 +71,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: BRAND.name,
     email: BRAND.email,
     telephone: BRAND.phoneHuman,
+    image: '/og-default.jpg',
+    logo: '/icon.png',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Houston',
@@ -95,4 +102,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

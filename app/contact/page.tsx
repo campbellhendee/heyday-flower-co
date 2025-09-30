@@ -3,7 +3,10 @@ import ContactForm from './ContactForm';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Start an inquiry for weddings, events, or daily arrangements.'
+  description: 'Start an inquiry for weddings, events, or daily arrangements.',
+  openGraph: {
+    images: ['/og-default.jpg']
+  }
 };
 
 export default function Page() {
@@ -17,4 +20,3 @@ export default function Page() {
     </section>
   );
 }
-

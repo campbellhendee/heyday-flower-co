@@ -6,7 +6,10 @@ import { daily } from '@/lib/galleries/daily';
 export const metadata = {
   title: 'Daily Arrangements',
   description:
-    'Weekly, biweekly, or monthly — tailored to your environment.'
+    'Weekly, biweekly, or monthly — tailored to your environment.',
+  openGraph: {
+    images: ['/images/hero/daily/daily-hero-001.jpg']
+  }
 };
 
 export default function Page() {
@@ -30,4 +33,3 @@ export default function Page() {
     </>
   );
 }
-

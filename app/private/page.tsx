@@ -6,7 +6,10 @@ import { privateEvents } from '@/lib/galleries/private';
 export const metadata = {
   title: 'Private Events',
   description:
-    'Tablescapes and entry moments designed for dinners, showers, and milestone celebrations.'
+    'Tablescapes and entry moments designed for dinners, showers, and milestone celebrations.',
+  openGraph: {
+    images: ['/images/hero/private/private-hero-001.jpg']
+  }
 };
 
 export default function Page() {
@@ -30,4 +33,3 @@ export default function Page() {
     </>
   );
 }
-

@@ -6,7 +6,10 @@ import { corporate } from '@/lib/galleries/corporate';
 export const metadata = {
   title: 'Corporate Events',
   description:
-    'Entrances, stages, step-and-repeats, and VIP lounges tailored to your palette.'
+    'Entrances, stages, step-and-repeats, and VIP lounges tailored to your palette.',
+  openGraph: {
+    images: ['/images/hero/corporate/corporate-hero-001.jpg']
+  }
 };
 
 export default function Page() {
@@ -30,4 +33,3 @@ export default function Page() {
     </>
   );
 }
-
