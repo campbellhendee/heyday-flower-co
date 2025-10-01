@@ -2,20 +2,24 @@
    Design Tokens
    ============== */
 :root {
-  --bg:#FAF9F7;
-  --surface:#FFFFFF;
-  --ink:#1B1B1B;
-  --ink-2:#4B5563;
-  --border:#E6E1DB;
-  --accent:#8EA693;
-  --accent-2:#DCC6BB;
-  --accent-deep:#2F3C35;
+  /* Palette */
+  --bg:#FAFAF9;         /* background */
+  --surface:#FFFFFF;     /* cards/surfaces */
+  --ink:#111111;         /* primary text */
+  --ink-2:#4B5563;       /* secondary text */
+  --border:#E7E5E4;      /* subtle borders */
+  --accent:#C8D0C6;      /* sage accent */
+  --accent-2:#DCC6BB;    /* supporting accent (kept) */
+  --accent-deep:#2F3C35; /* deep accent for primary buttons */
+
+  /* Layout */
   --radius:14px;
   --shadow:0 16px 40px rgba(0,0,0,.08);
   --container:72rem;
   --gutter:24px;
 
-  --ring: 0 0 0 3px rgba(142,166,147,.35);
+  /* Focus ring */
+  --ring: 0 0 0 3px rgba(200,208,198,.45);
 }
 
 /* ==============
@@ -92,6 +96,13 @@ p { margin: 0 0 1rem; color: var(--ink-2); }
 }
 .nav a:hover, .nav a:focus-visible { color: var(--ink); background: rgba(0,0,0,.04); }
 .brand { font-family: var(--font-fraunces); font-weight: 700; color: var(--ink); font-size: 1.05rem; letter-spacing: .02em; }
+
+/* Active link (dropdown + future inline nav) */
+.menu-link[aria-current="page"],
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  background: color-mix(in oklab, var(--accent), #fff 70%);
+}
 
 /* ==============
    Buttons

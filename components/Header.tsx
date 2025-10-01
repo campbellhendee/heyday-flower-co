@@ -2,18 +2,21 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
-// Your existing nav items
+// Primary nav (Home via logo). Consolidate content as per IA:
+// Occasions includes Daily; Events includes Corporate + Private.
 const nav = [
-  { href: '/', label: 'Home' },
   { href: '/weddings', label: 'Weddings' },
-  { href: '/corporate', label: 'Corporate Events' },
-  { href: '/private', label: 'Private Events' },
-  { href: '/daily', label: 'Daily Arrangements' },
+  { href: '/occasions', label: 'Occasions' },
+  { href: '/events', label: 'Events' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' }
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   // Tracks header styling when the page is scrolled
   const [scrolled, setScrolled] = useState(false);
 
@@ -98,6 +101,7 @@ export default function Header() {
                       role="menuitem"
                       href={n.href}
                       className="menu-link"
+                      aria-current={pathname === n.href ? 'page' : undefined}
                       // Close the menu when a link is clicked
                       onClick={() => setOpen(false)}
                     >
@@ -117,7 +121,7 @@ export default function Header() {
                     className="menu-link button"
                     onClick={() => setOpen(false)}
                   >
-                    Start Inquiry
+                    Inquire
                   </Link>
                 </li>
               </ul>
