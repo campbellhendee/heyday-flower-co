@@ -60,7 +60,7 @@ export default function Header() {
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav">
         {/* Brand / Logo */}
-        <Link href="/" className="brand" aria-label="Heyday Flower Co">
+        <Link href="/" className="brand" aria-label="Heyday Flower Co - Home">
           Heyday Flower Co
         </Link>
 
@@ -91,7 +91,7 @@ export default function Header() {
               id="primary-menu"
               className="dropdown"
               role="menu"
-              aria-label="Primary"
+              aria-label="Main navigation"
             >
               <ul className="dropdown-list">
                 {/* Nav links moved into the dropdown */}
