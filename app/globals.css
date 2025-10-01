@@ -278,7 +278,8 @@ p {
 .hero__img--active { opacity: 1; }
 .hero__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.1) 30%, transparent 60%);
+  /* Slightly stronger overlay improves hero text readability */
+  background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,.18) 32%, transparent 60%);
   pointer-events: none;
 }
 @media (max-width: 600px) {
@@ -348,7 +349,8 @@ p {
   display:inline-block; font-size:.9rem; letter-spacing:.12em; text-transform:uppercase; opacity:.9;
 }
 .hero__title { margin:.45rem 0; font-weight:700; }
-.hero__sub { color: rgba(255,255,255,.9); max-width: 50ch; }
+.hero__title, .hero__sub { text-shadow: 0 1px 16px rgba(0,0,0,.35); }
+.hero__sub { color: rgba(255,255,255,.92); max-width: 50ch; }
 .hero__cta { margin-top: 1rem; }
 
 /* Dots/controls */

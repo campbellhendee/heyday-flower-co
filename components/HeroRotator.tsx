@@ -89,7 +89,7 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
             fill
             priority={i === 0}
             sizes="100vw"
-            quality={img.quality ?? 90}
+            quality={img.quality ?? 85}
             style={{ objectFit: 'cover', objectPosition: img.position || '50% 50%' }}
           />
         </div>
