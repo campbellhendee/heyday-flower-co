@@ -1,11 +1,11 @@
 export type Pic = { src:string; alt:string; position?: string; quality?: number }
 
 export const homeHero: Pic[] = [
-  { src: '/images/gallery/weddings/weddings-001.jpg', alt: 'Premium wedding floral installation by Heyday Flower Co', position: '50% 35%', quality: 85 },
-  { src: '/images/hero/home/home-hero-002.jpg', alt: 'Luxury corporate event florals' },
-  { src: '/images/hero/home/home-hero-003.jpg', alt: 'Elegant wedding ceremony arrangements' },
-  { src: '/images/hero/home/home-hero-004.jpg', alt: 'Intimate occasion floral design' },
-  { src: '/images/hero/home/home-hero-005.jpg', alt: 'Daily luxury floral arrangements' }
+  { src: '/images/gallery/weddings/weddings-003.jpg', alt: '', position: '50% 40%', quality: 85 },
+  { src: '/images/gallery/corporate/corporate-005.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/weddings/weddings-007.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/private/private-009.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/daily/daily-002.jpg', alt: '', quality: 85 }
 ];
 
 export const weddingsHero: Pic[] = [
@@ -13,22 +13,22 @@ export const weddingsHero: Pic[] = [
 ];
 
 export const corporateHero: Pic[] = [
-  { src: '/images/hero/corporate/corporate-hero-001.jpg', alt: '' },
-  { src: '/images/hero/corporate/corporate-hero-002.jpg', alt: '' },
-  { src: '/images/hero/corporate/corporate-hero-003.jpg', alt: '' },
-  { src: '/images/hero/corporate/corporate-hero-004.jpg', alt: '' }
+  { src: '/images/gallery/corporate/corporate-001.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/corporate/corporate-005.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/corporate/corporate-008.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/corporate/corporate-010.jpg', alt: '', quality: 85 }
 ];
 
 export const privateHero: Pic[] = [
-  { src: '/images/hero/private/private-hero-001.jpg', alt: '' },
-  { src: '/images/hero/private/private-hero-002.jpg', alt: '' },
-  { src: '/images/hero/private/private-hero-003.jpg', alt: '' },
-  { src: '/images/hero/private/private-hero-004.jpg', alt: '' }
+  { src: '/images/gallery/private/private-001.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/private/private-002.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/private/private-003.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/private/private-004.jpg', alt: '', quality: 85 }
 ];
 
 export const dailyHero: Pic[] = [
-  { src: '/images/hero/daily/daily-hero-001.jpg', alt: '' },
-  { src: '/images/hero/daily/daily-hero-002.jpg', alt: '' },
-  { src: '/images/hero/daily/daily-hero-003.jpg', alt: '' },
-  { src: '/images/hero/daily/daily-hero-004.jpg', alt: '' }
+  { src: '/images/gallery/daily/daily-001.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/daily/daily-002.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/daily/daily-003.jpg', alt: '', quality: 85 },
+  { src: '/images/gallery/daily/daily-004.jpg', alt: '', quality: 85 }
 ];
