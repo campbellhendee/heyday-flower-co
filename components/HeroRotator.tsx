@@ -73,7 +73,7 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
 
   return (
     <section
-      className="hero"
+      className="hero hero--split"
       aria-label={title}
       onMouseEnter={() => setAuto(false)}
       onMouseLeave={() => setAuto(true)}
