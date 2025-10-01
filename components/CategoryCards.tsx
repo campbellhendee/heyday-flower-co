@@ -50,7 +50,7 @@ export default function CategoryCards() {
                 'transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out)'
             }}
           >
-            <div style={{ position: 'relative', height: '280px', overflow: 'hidden' }}>
+            <div style={{ position: 'relative', height: 'clamp(200px, 55vw, 280px)', overflow: 'hidden' }}>
               <Image
                 src={cat.image}
                 alt={cat.title}
