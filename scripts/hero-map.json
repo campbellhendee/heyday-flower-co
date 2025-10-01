@@ -1,0 +1,31 @@
+{
+  "home": [
+    "public/images/gallery/weddings/weddings-003.jpg",
+    "public/images/gallery/corporate/corporate-005.jpg",
+    "public/images/gallery/weddings/weddings-007.jpg",
+    "public/images/gallery/private/private-009.jpg",
+    "public/images/gallery/daily/daily-002.jpg"
+  ],
+  "weddings": [
+    "public/images/gallery/corporate/corporate-010.jpg"
+  ],
+  "corporate": [
+    "public/images/gallery/corporate/corporate-001.jpg",
+    "public/images/gallery/corporate/corporate-005.jpg",
+    "public/images/gallery/corporate/corporate-008.jpg",
+    "public/images/gallery/corporate/corporate-010.jpg"
+  ],
+  "private": [
+    "public/images/gallery/private/private-001.jpg",
+    "public/images/gallery/private/private-002.jpg",
+    "public/images/gallery/private/private-003.jpg",
+    "public/images/gallery/private/private-004.jpg"
+  ],
+  "daily": [
+    "public/images/gallery/daily/daily-001.jpg",
+    "public/images/gallery/daily/daily-002.jpg",
+    "public/images/gallery/daily/daily-003.jpg",
+    "public/images/gallery/daily/daily-004.jpg"
+  ]
+}
+
