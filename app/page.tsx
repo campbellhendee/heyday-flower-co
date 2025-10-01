@@ -1,5 +1,7 @@
 import HeroRotator from '@/components/HeroRotator';
-import ServicesGrid from '@/components/ServicesGrid';
+import CategoryCards from '@/components/CategoryCards';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
+import FeaturedStrip from '@/components/FeaturedStrip';
 import { homeHero } from '@/lib/heroes';
 
 export default function Page() {
@@ -7,24 +9,27 @@ export default function Page() {
     <>
       <HeroRotator
         images={homeHero}
-        eyebrow="Heyday Flower Co"
-        title="Floral artistry for celebrations and spaces"
-        sub="Custom blooms crafted for weddings, events, and refined daily environments."
+        eyebrow="Houston's Premier Florist"
+        title="Where nature meets luxury"
+        sub="Bespoke floral design for discerning clients who value artistry, quality, and impeccable service."
       />
-      <section className="container" style={{ marginTop: '2rem' }}>
-        <p style={{ maxWidth: '60ch' }}>
-          Thoughtful palettes, architectural stems, and intentional placement. We create work
-          that feels effortless and elevated—tailored to your setting.
+      <section className="container" style={{ marginTop: '3rem', marginBottom: '2rem' }}>
+        <p style={{ maxWidth: '65ch', fontSize: '1.125rem', lineHeight: '1.8' }}>
+          From intimate gatherings to grand celebrations, we craft unforgettable floral experiences
+          that reflect your unique style and story. Every stem is carefully selected, every arrangement
+          thoughtfully composed.
         </p>
       </section>
-      <ServicesGrid />
+      <CategoryCards />
+      <TestimonialCarousel />
+      <FeaturedStrip />
       <section className="container" style={{ marginBottom: '3rem' }}>
         <div className="cta">
-          <h2 style={{ margin: 0 }}>Let’s design your floral story</h2>
-          <p style={{ margin: '.4rem 0 1rem', color: 'var(--ink-2)' }}>
-            Weddings, brand events, private gatherings, and ongoing arrangements.
+          <h2 style={{ margin: 0, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)' }}>Ready to elevate your next event?</h2>
+          <p style={{ margin: '.6rem 0 1.2rem', color: 'var(--ink-2)', fontSize: '1.125rem' }}>
+            Let's create something extraordinary together.
           </p>
-          <a className="button--primary" href="/contact">Start Inquiry</a>
+          <a className="button--primary" href="/contact">Start Your Inquiry</a>
         </div>
       </section>
     </>
