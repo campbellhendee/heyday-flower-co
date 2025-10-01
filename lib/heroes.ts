@@ -1,4 +1,4 @@
-export type Pic = { src:string; alt:string }
+export type Pic = { src:string; alt:string; position?: string }
 
 export const homeHero: Pic[] = [
   { src: '/images/gallery/weddings/weddings-001.jpg', alt: 'Premium wedding floral installation by Heyday Flower Co' },
@@ -9,7 +9,7 @@ export const homeHero: Pic[] = [
 ];
 
 export const weddingsHero: Pic[] = [
-  { src: '/images/gallery/corporate/corporate-010.jpg', alt: 'Luxury wedding floral design by Heyday Flower Co' }
+  { src: '/images/gallery/corporate/corporate-010.jpg', alt: 'Luxury wedding floral design by Heyday Flower Co', position: '50% 35%' }
 ];
 
 export const corporateHero: Pic[] = [

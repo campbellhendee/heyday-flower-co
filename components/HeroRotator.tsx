@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-type HeroImage = { src: string; alt: string };
+type HeroImage = { src: string; alt: string; position?: string; quality?: number };
 type Props = {
   images: HeroImage[];
   eyebrow: string;
@@ -83,7 +83,15 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
     >
       {images.map((img, i) => (
         <div key={img.src} className={`hero__img ${i === index ? 'hero__img--active' : ''}`}>
-          <Image src={img.src} alt={img.alt} fill priority={i === 0} sizes="100vw" style={{ objectFit: 'cover' }} />
+          <Image
+            src={img.src}
+            alt={img.alt}
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            quality={img.quality ?? 90}
+            style={{ objectFit: 'cover', objectPosition: img.position || '50% 50%' }}
+          />
         </div>
       ))}
       <div className="hero__overlay" />
