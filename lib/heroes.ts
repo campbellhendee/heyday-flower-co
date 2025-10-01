@@ -9,7 +9,7 @@ export const homeHero: Pic[] = [
 ];
 
 export const weddingsHero: Pic[] = [
-  { src: '/images/hero/weddings/weddings-hero-001.jpg', alt: '' },
+  { src: '/images/gallery/weddings/weddings-001.jpg', alt: '' },
   { src: '/images/hero/weddings/weddings-hero-002.jpg', alt: '' },
   { src: '/images/hero/weddings/weddings-hero-003.jpg', alt: '' },
   { src: '/images/hero/weddings/weddings-hero-004.jpg', alt: '' }
