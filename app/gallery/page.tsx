@@ -1,10 +1,11 @@
 export const metadata = {
-  title: 'Gallery',
-  description: 'A curated selection of weddings, occasions, and events.'
+  title: 'Gallery — Heyday Flower Co',
+  description:
+    'Browse our portfolio of luxury floral designs for weddings, corporate events, and private occasions in Houston.'
 };
 
-import GalleryClient from './GalleryClient';
+import GalleryPage from '@/components/GalleryPage';
 
 export default function Page() {
-  return <GalleryClient />;
+  return <GalleryPage />;
 }
