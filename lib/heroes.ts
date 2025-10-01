@@ -1,9 +1,9 @@
 export type Pic = { src:string; alt:string }
 
 export const homeHero: Pic[] = [
+  { src: '/images/hero/home/home-hero-003.jpg', alt: '' },
   { src: '/images/hero/home/home-hero-001.jpg', alt: '' },
   { src: '/images/hero/home/home-hero-002.jpg', alt: '' },
-  { src: '/images/hero/home/home-hero-003.jpg', alt: '' },
   { src: '/images/hero/home/home-hero-004.jpg', alt: '' },
   { src: '/images/hero/home/home-hero-005.jpg', alt: '' }
 ];
