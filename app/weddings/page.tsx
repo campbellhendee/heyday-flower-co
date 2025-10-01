@@ -8,7 +8,7 @@ export const metadata = {
   description:
     'Romantic blooms, lush installations, and intentional details from welcome party to farewell brunch.',
   openGraph: {
-    images: ['/images/gallery/weddings/weddings-001.jpg']
+    images: ['/images/gallery/corporate/corporate-010.jpg']
   }
 };
 
@@ -37,4 +37,3 @@ export default function Page() {
     </>
   );
 }
-

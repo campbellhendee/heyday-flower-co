@@ -6,7 +6,7 @@ const categories = [
     href: '/weddings',
     title: 'Weddings',
     description: 'Timeless florals for your forever moments',
-    image: '/images/gallery/weddings/weddings-001.jpg'
+    image: '/images/gallery/corporate/corporate-010.jpg'
   },
   {
     href: '/occasions',

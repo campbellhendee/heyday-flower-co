@@ -56,22 +56,30 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
     setIndex((i) => (i + 1) % images.length);
   };
 
+  // Touch handlers for mobile swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartX.current || !multiple) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+    }
+    touchStartX.current = null;
+  };
+
   return (
     <section
       className="hero"
       aria-label={title}
       onMouseEnter={() => setAuto(false)}
       onMouseLeave={() => setAuto(true)}
-      onTouchStart={(e) => { if (!multiple) return; touchStartX.current = e.touches[0]?.clientX ?? null; }}
-      onTouchEnd={(e) => {
-        if (!multiple || touchStartX.current == null) return;
-        const dx = (e.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
-        const threshold = 30;
-        if (Math.abs(dx) > threshold) {
-          if (dx < 0) next(); else prev();
-        }
-        touchStartX.current = null;
-      }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      style={{ touchAction: 'pan-y' }}
     >
       {images.map((img, i) => (
         <div key={img.src} className={`hero__img ${i === index ? 'hero__img--active' : ''}`}>
@@ -89,23 +97,25 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
       </div>
       {/* Subtle prev/next controls */}
       {multiple && (
-      <button
-        type="button"
-        className="hero__nav hero__nav--prev"
-        aria-label="Previous slide"
-        onClick={prev}
-      >
-        ‹
-      </button>)}
-      {multiple && (
-      <button
-        type="button"
-        className="hero__nav hero__nav--next"
-        aria-label="Next slide"
-        onClick={next}
-      >
-        ›
-      </button>)}
+        <div className="hero__nav-desktop">
+          <button
+            type="button"
+            className="hero__nav hero__nav--prev"
+            aria-label="Previous slide"
+            onClick={prev}
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            className="hero__nav hero__nav--next"
+            aria-label="Next slide"
+            onClick={next}
+          >
+            ›
+          </button>
+        </div>
+      )}
       {multiple && (
         <div className="hero__dots" aria-hidden="true">
           {images.map((_, i) => (
@@ -117,6 +127,12 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
               onClick={() => { setAuto(false); setIndex(i); }}
             />
           ))}
+        </div>
+      )}
+
+      {multiple && (
+        <div className="hero__swipe-indicator">
+          <span>Swipe for more</span>
         </div>
       )}
     </section>

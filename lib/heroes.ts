@@ -9,7 +9,7 @@ export const homeHero: Pic[] = [
 ];
 
 export const weddingsHero: Pic[] = [
-  { src: '/images/gallery/weddings/weddings-001.jpg', alt: 'Romantic bouquet with red and blush roses' }
+  { src: '/images/gallery/corporate/corporate-010.jpg', alt: 'Luxury wedding floral design by Heyday Flower Co' }
 ];
 
 export const corporateHero: Pic[] = [
