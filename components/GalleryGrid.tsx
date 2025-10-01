@@ -13,6 +13,7 @@ export default function GalleryGrid({ pics }: { pics: Pic[] }) {
               alt={p.alt}
               width={1600}
               height={1000}
+              quality={100}
               style={{ width: '100%', height: 'auto', display: 'block' }}
               loading="lazy"
               sizes="(max-width: 1080px) 100vw, 33vw"

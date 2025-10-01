@@ -43,10 +43,12 @@ export default function FeaturedStrip() {
             <Image
               src={img.src}
               alt={img.alt}
-              width={400}
-              height={500}
+              width={800}
+              height={1000}
+              quality={100}
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               loading="lazy"
+              sizes="(max-width: 768px) 80vw, (max-width: 1200px) 33vw, 25vw"
             />
           </figure>
         ))}
@@ -54,4 +56,3 @@ export default function FeaturedStrip() {
     </section>
   );
 }
-

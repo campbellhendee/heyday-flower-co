@@ -55,6 +55,7 @@ export default function CategoryCards() {
                 src={cat.image}
                 alt={cat.title}
                 fill
+                quality={100}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />
