@@ -237,6 +237,23 @@ p {
   overflow: clip; background: #000;
 }
 .hero__img { transition: opacity var(--duration-base) var(--ease-out); }
+.hero__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface), #fff 6%);
+  color: var(--ink-2);
+  cursor: pointer;
+  opacity: .85;
+  transition: background var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out), opacity var(--duration-base) var(--ease-out);
+}
+.hero__nav:hover, .hero__nav:focus-visible { background: var(--surface); color: var(--ink); opacity: 1; }
+.hero__nav--prev { left: clamp(10px, 2vw, 16px); }
+.hero__nav--next { right: clamp(10px, 2vw, 16px); }
 .hero__img { position: absolute; inset: 0; opacity: 0; transition: opacity .8s ease; }
 .hero__img--active { opacity: 1; }
 .hero__overlay {

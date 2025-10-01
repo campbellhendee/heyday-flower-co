@@ -18,6 +18,7 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
   const [auto, setAuto] = useState(true);
   const isReduced = useMemo(() => typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches, []);
   const timer = useRef<NodeJS.Timeout | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     if (isReduced || !auto) return;
@@ -27,8 +28,47 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
     return () => { if (timer.current) clearInterval(timer.current); };
   }, [images.length, auto, isReduced]);
 
+  // Keyboard navigation (Left/Right arrows)
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        setAuto(false);
+        setIndex((i) => (i + 1) % images.length);
+      } else if (e.key === 'ArrowLeft') {
+        setAuto(false);
+        setIndex((i) => (i - 1 + images.length) % images.length);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [images.length]);
+
+  const prev = () => {
+    setAuto(false);
+    setIndex((i) => (i - 1 + images.length) % images.length);
+  };
+  const next = () => {
+    setAuto(false);
+    setIndex((i) => (i + 1) % images.length);
+  };
+
   return (
-    <section className="hero" aria-label={title} onMouseEnter={() => setAuto(false)} onMouseLeave={() => setAuto(true)}>
+    <section
+      className="hero"
+      aria-label={title}
+      onMouseEnter={() => setAuto(false)}
+      onMouseLeave={() => setAuto(true)}
+      onTouchStart={(e) => { touchStartX.current = e.touches[0]?.clientX ?? null; }}
+      onTouchEnd={(e) => {
+        if (touchStartX.current == null) return;
+        const dx = (e.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
+        const threshold = 30;
+        if (Math.abs(dx) > threshold) {
+          if (dx < 0) next(); else prev();
+        }
+        touchStartX.current = null;
+      }}
+    >
       {images.map((img, i) => (
         <div key={img.src} className={`hero__img ${i === index ? 'hero__img--active' : ''}`}>
           <Image src={img.src} alt={img.alt} fill priority={i === 0} sizes="100vw" style={{ objectFit: 'cover' }} />
@@ -43,9 +83,32 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
           <p className="hero__cta"><a className="button--primary" href={ctaHref}>{ctaLabel}</a></p>
         </div>
       </div>
+      {/* Subtle prev/next controls */}
+      <button
+        type="button"
+        className="hero__nav hero__nav--prev"
+        aria-label="Previous slide"
+        onClick={prev}
+      >
+        ‹
+      </button>
+      <button
+        type="button"
+        className="hero__nav hero__nav--next"
+        aria-label="Next slide"
+        onClick={next}
+      >
+        ›
+      </button>
       <div className="hero__dots" aria-hidden="true">
         {images.map((_, i) => (
-          <span key={i} className={`hero__dot ${i === index ? 'hero__dot--active' : ''}`} />
+          <button
+            key={i}
+            type="button"
+            className={`hero__dot ${i === index ? 'hero__dot--active' : ''}`}
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={() => { setAuto(false); setIndex(i); }}
+          />
         ))}
       </div>
     </section>
