@@ -285,15 +285,16 @@ p {
 
 /* Desktop Two-Column Layout (split) */
 @media (min-width: 1024px) {
-  .hero--split { display: grid; grid-template-columns: 40% 60%; height: 85vh; min-height: 600px; max-height: 900px; position: relative; }
+  .hero--split { display: grid; grid-template-columns: 40% 60%; height: 85vh; min-height: 600px; max-height: 900px; position: relative; background: var(--bg); }
   .hero--split .hero__overlay { display: none; }
   /* Constrain images to right side */
   .hero--split .hero__img { left: 40%; right: 0; }
   /* Left column content */
-  .hero--split .hero__inner { grid-column: 1; position: relative; z-index: 2; color: var(--ink); display: flex; align-items: center; min-height: 100%; padding: 3rem; }
+  .hero--split .hero__inner { grid-column: 1; position: relative; z-index: 2; color: var(--ink); display: flex; align-items: center; min-height: 100%; padding: 3rem; background: var(--bg); border-right: 1px solid var(--border); }
   .hero--split .hero__copy { max-width: 500px; margin: 0; }
   .hero--split .hero__title { color: var(--ink); margin-top: 1rem; text-shadow: none; }
   .hero--split .hero__sub { color: var(--ink-2); text-shadow: none; }
+  .hero--split .hero__eyebrow { color: var(--accent-deep); }
   .hero--split .hero__nav-desktop { position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 20; }
 }
 @media (max-width: 600px) {
