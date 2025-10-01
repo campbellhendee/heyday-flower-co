@@ -236,7 +236,7 @@ p {
   position: relative; min-height: min(82vh, 900px); width: 100%;
   overflow: clip; background: #000;
 }
-.hero__img { transition: opacity var(--duration-slow) var(--ease-out); }
+.hero__img { transition: opacity var(--duration-base) var(--ease-out); }
 .hero__img { position: absolute; inset: 0; opacity: 0; transition: opacity .8s ease; }
 .hero__img--active { opacity: 1; }
 .hero__overlay {

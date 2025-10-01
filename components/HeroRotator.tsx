@@ -23,7 +23,7 @@ export default function HeroRotator({ images, eyebrow, title, sub, ctaHref = '/c
     if (isReduced || !auto) return;
     timer.current = setInterval(() => {
       setIndex((i) => (i + 1) % images.length);
-    }, 5000);
+    }, 3000);
     return () => { if (timer.current) clearInterval(timer.current); };
   }, [images.length, auto, isReduced]);
 
